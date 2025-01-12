@@ -1,0 +1,27 @@
+// _fonts.scss
+$font-mr-hamiltone: "mr_HamiltoneG", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-murs-gothic: "Murs Gothic", sans-serif;
+$font-unbounded: "Unbounded", sans-serif;
+
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+$weight-extra-bold: 800;
+
+// _mixins.scss
+@mixin font($family, $weight: 400, $size, $color, $style: normal) {
+   font-family: $family;
+   font-weight: $weight;
+   font-size: $size;
+   color: $color;
+   font-style: $style;
+}
+
+// Colors
+$color-black: rgba(0, 0, 0, 0.9);
+$color-light-black: rgba(0, 0, 0, 0.7);
+$color-blue: #1e43ebbf;
+$color-white: #ffffff;
+$color-light-blue: #d9dbff;

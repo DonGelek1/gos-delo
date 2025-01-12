@@ -1,0 +1,19 @@
+@font-face {
+   font-family: "mr_HamiltoneG";
+   src: url("./mr_HamiltoneG.ttf") format("truetype");
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Murs Gothic";
+   src: url("./MursGothic-WideDark.ttf") format("truetype");
+   font-weight: 800;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Unbounded";
+   src: url("./Unbounded-Medium.ttf") format("truetype");
+   font-weight: 500;
+   font-style: normal;
+}

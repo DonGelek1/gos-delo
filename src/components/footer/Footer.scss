@@ -1,0 +1,37 @@
+@use "../../assets/var/Variables" as vars;
+
+.footer {
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   position: relative;
+   z-index: 2;
+   width: 100%;
+   height: 70px;
+   border-top: 1px solid #00000033;
+
+   &__content {
+      display: grid;
+      align-items: center;
+      grid-template: 1fr /1fr auto;
+      position: relative;
+      width: 86.5%;
+      margin: 0 20px;
+
+      @media (max-width: 931px) {
+         width: 95%;
+      }
+   }
+
+   &__text {
+      @include vars.font(vars.$font-montserrat, vars.$weight-regular, 17px, vars.$color-black);
+      @media (max-width: 475px) {
+         margin: 0 10px 0 0;
+         font-size: 12px;
+      }
+   }
+
+   &__icon {
+      margin-right: 13px;
+   }
+}
