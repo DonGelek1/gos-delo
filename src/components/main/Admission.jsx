@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Admission = () => {
    const steps = [
@@ -39,7 +40,6 @@ const Admission = () => {
                   Направление подготовки — «Гостиничное дело».
                </li>
             </ul>
-
          ),
       },
       {
@@ -49,25 +49,38 @@ const Admission = () => {
       },
    ];
 
+   const fadeIn = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+   };
+
+   const staggerContainer = {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.5 } },
+   };
+
    return (
-      <section className="admission">
+      <motion.section
+         className="admission"
+         initial="hidden"
+         whileInView="visible"
+         viewport={{ once: true }}
+         variants={staggerContainer}
+      >
          <div className="admission__content">
             {steps.map((step) => (
-               <div key={step.id} className="admission__step">
+               <motion.div key={step.id} className="admission__step" variants={fadeIn}>
                   <h3 className="admission__title">{step.title}</h3>
                   <div className="admission__description">
                      {step.description}
                      {step.link && (
-                        <>
-                           {' '}
-                           <a href={step.link} target="_blank" rel="noopener noreferrer">
-                              {step.link}
-                           </a>
-                        </>
+                        <a href={step.link} target="_blank" rel="noopener noreferrer">
+                           {step.link}
+                        </a>
                      )}
                   </div>
                   <span className="admission__number">{step.id}</span>
-               </div>
+               </motion.div>
             ))}
             <button
                className="admission__button"
@@ -76,7 +89,7 @@ const Admission = () => {
                Хочу поступить
             </button>
          </div>
-      </section>
+      </motion.section>
    );
 };
 
