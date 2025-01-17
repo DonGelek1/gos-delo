@@ -200,14 +200,14 @@
    }
 }
 
-// @keyframes move-left {
-//    from {
-//       transform: translateX(0);
-//    }
-//    to {
-//       transform: translateX(-50%);
-//    }
-// }
+@keyframes move-left {
+   from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(-50%);
+   }
+}
 
 .description {
    display: grid;
