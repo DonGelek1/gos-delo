@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 const Exam = () => {
    const requiredExams = [
-      { id: 1, subject: "Русский", contract: 40, budget: 65 },
-      { id: 2, subject: "Обществознание", contract: 45, budget: 65 },
+      { id: 1, subject: "Русский", contract: 42, budget: 70 },
+      { id: 2, subject: "Обществознание", contract: 47, budget: 70 },
    ];
 
    const optionalExams = [
-      { id: 1, subject: "Иностранный язык", contract: 35, budget: 65 },
-      { id: 2, subject: "Информатика и ИКТ", contract: 44, budget: 65 },
-      { id: 3, subject: "История", contract: 40, budget: 65 },
+      { id: 1, subject: "Иностранный язык", contract: 40, budget: 70 },
+      { id: 2, subject: "Информатика и ИКТ", contract: 47, budget: 70 },
+      { id: 3, subject: "История", contract: 40, budget: 70 },
    ];
 
    const fadeIn = {
