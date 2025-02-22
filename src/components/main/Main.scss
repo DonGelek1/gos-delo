@@ -14,19 +14,25 @@
    display: grid;
    align-items: center;
    justify-items: center;
-   margin-bottom: 15.1vw;
-   @media (max-width: 1880px) {
-      margin-bottom: 12.4vw;
-      @media (max-width: 1460px) {
-         margin-bottom: 10.4vw;
-         @media (max-width: 1255px) {
-            margin-bottom: 8.4vw;
-            @media (max-width: 1108px) {
-               margin-bottom: 110px;
-               @media (max-width: 888px) {
-                  margin-bottom: 70px;
-                  @media (max-width: 595px) {
-                     margin-bottom: 100px;
+   margin-bottom: 9vw;
+   @media (max-width: 1375px) {
+      margin-bottom: 7vw;
+      @media (max-width: 1168px) {
+         margin-bottom: 6vw;
+         @media (max-width: 1023px) {
+            margin-bottom: 115px;
+            @media (max-width: 980px) {
+               margin-bottom: 70px;
+               @media (max-width: 931px) {
+                  margin-bottom: 100px;
+                  @media (max-width: 888px) {
+                     margin-bottom: 29px;
+                     @media (max-width: 600px) {
+                        margin-bottom: 90px;
+                        @media (max-width: 469px) {
+                           margin-bottom: 30px;
+                        }
+                     }
                   }
                }
             }
@@ -37,7 +43,7 @@
    &::after {
       content: "";
       position: absolute;
-      top: clamp(50px, 1vw, 250px);
+      top: 125px;
       left: 0;
       width: clamp(800px, 101vw, 2146px);
       height: clamp(400px, 61.3vw, 1177px);
@@ -55,12 +61,25 @@
       display: grid;
       justify-items: start;
       align-items: center;
-      grid-template: repeat(3, auto) / 1fr 1fr;
+      grid-template: repeat(4, auto) / 1fr 1fr;
       width: 86.5%;
       margin: 0 20px;
       @media (max-width: 931px) {
          width: 95%;
       }
+   }
+   &__text {
+      @include vars.font(vars.$font-montserrat, vars.$weight-regular, clamp(1rem, 1.07vw, 2rem), vars.$color-black);
+      margin: clamp(30px, 3.646vw, 70px) 0 0 0;
+      line-height: 25px;
+      grid-column: 1 / 3;
+      background-color: rgba(84, 110, 240, 4%);
+      padding: 18px 20px;
+      border-radius: 10px;
+   }
+   &__link {
+      @include vars.font(vars.$font-montserrat, vars.$weight-medium, clamp(1rem, 1.07vw, 2rem), #1e43eb);
+      background-color: rgba(0, 0, 0, 0);
    }
 
    &__subtitle {
@@ -162,7 +181,7 @@
       border-radius: 5px;
 
       @media (max-width: 888px) {
-         grid-row: 4/5;
+         grid-row: 5/6;
          grid-column: 1 / 3;
          margin: 30px 0 0 0;
       }
@@ -197,6 +216,7 @@
       gap: clamp(20px, 4vw, 80px);
       white-space: nowrap;
       margin: 0 clamp(20px, 4vw, 80px) 0 0;
+      line-height: 1;
    }
 }
 
@@ -741,6 +761,7 @@
       height: clamp(20px, 2.3vw, 45px);
       border-radius: 50%;
       border: 1px solid #1e43eb;
+      line-height: 1;
    }
 
    &__button {

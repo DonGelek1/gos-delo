@@ -1,0 +1,85 @@
+.modal {
+   position: fixed;
+   z-index: 1000;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.5);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &__content {
+      background: #fff;
+      padding: 30px;
+      margin: 0 20px;
+      border-radius: 30px;
+      width: 100%;
+      max-width: 559px;
+      position: relative;
+   }
+
+   &__form {
+      display: grid;
+
+      align-items: end;
+      grid-template: 1fr 80px /1fr 146px;
+      @media (max-width: 600px) {
+         grid-template: 1fr 80px 80px /1fr;
+      }
+   }
+
+   &__text {
+      grid-column: 1 / 4;
+      font-family: "Montserrat";
+      font-size: clamp(16px, 1.25vw, 24px);
+      font-weight: 500;
+      line-height: 30px;
+      @media (max-width: 600px) {
+         grid-column: 1 / 3;
+      }
+   }
+
+   &__input {
+      font-family: "Montserrat";
+      font-weight: 400;
+      font-size: clamp(16px, 1.05vw, 20px);
+      padding: 0px 10px;
+      margin: 0 15px 0 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: auto;
+      height: 53px;
+   }
+
+   &__button {
+      font-family: "Montserrat";
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      font-size: clamp(16px, 1.05vw, 20px);
+      border-radius: 4px;
+      transition: 0.3s;
+      height: 53px;
+   }
+
+   &__button--submit {
+      background: rgba(0, 0, 255, 0.82);
+      color: white;
+      grid-column: span 2;
+      &:hover {
+         background: rgb(177, 177, 177);
+      }
+   }
+
+   &__button--close {
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 0px;
+      right: 5px;
+   }
+}

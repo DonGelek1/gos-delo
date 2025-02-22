@@ -3,10 +3,10 @@ import Navbar from './Navbar';
 import logo from '../../assets/images/RUDN-logo.svg';
 import './Header.scss';
 
-const Header = () => {
+const Header = ({ isModalOpen, modalType }) => {
 
    return (
-      <header className='header'>
+      <header className={isModalOpen || modalType ? 'header.hidden' : 'header'}>
          <div className='header__container'>
             <div className='header__logo'>
                <img src={logo} alt="RUDN University Logo" />

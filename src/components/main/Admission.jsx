@@ -7,7 +7,7 @@ const Admission = () => {
          id: 1,
          title: 'Регистрация',
          description: 'Зарегистрироваться в личном кабинете приёмной комиссии',
-         link: 'https://ab.rudn.ru',
+         link: ' https://ab.rudn.ru',
       },
       {
          id: 2,

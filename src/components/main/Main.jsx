@@ -8,10 +8,15 @@ import Admission from './Admission';
 import Banner from './Banner';
 import './Main.scss';
 
-const Main = () => {
+const Main = ({ isModalOpen, setIsModalOpen, modalType, setModalType }) => {
    return (
       <main className="main">
-         <Hero />
+         <Hero
+            isModalOpen={isModalOpen}
+            setIsModalOpen={setIsModalOpen}
+            modalType={modalType}
+            setModalType={setModalType}
+         />
          <Banner id="description" text="ОПИСАНИЕ" />
          <Description />
          <Banner id="practice" text="ПРАКТИКА" />
